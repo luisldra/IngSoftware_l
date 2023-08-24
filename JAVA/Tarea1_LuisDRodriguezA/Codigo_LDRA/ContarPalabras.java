@@ -1,5 +1,3 @@
-package Tarea_1;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -11,8 +9,9 @@ public class ContarPalabras {
     public void recibirRuta (){
         Scanner scan = new Scanner(System.in);
     
-        // D:\\Usuarios\\Luisda\\Descargas\\U\\Ingenieria de Software\\Java\\Tarea_1\\pruebas\\pruebas1
-    
+        // D:\\Usuarios\\Luisda\\Descargas\\U\\Ingenieria de Software 23-2\\IngSoftware_l\\JAVA\\Tarea1_LuisDRodriguezA\\2-Pruebas_LDRA\\2.1-Pruebas1_LDRA
+        // D:\\Usuarios\\Luisda\\Descargas\\U\\Ingenieria de Software 23-2\\IngSoftware_l\\JAVA\\Tarea1_LuisDRodriguezA\\2-Pruebas_LDRA\\2.2-Pruebas2_LDRA
+
         System.out.println("Ingrese la ubicacion de la carpeta:");
         carpeta = scan.nextLine();
     
