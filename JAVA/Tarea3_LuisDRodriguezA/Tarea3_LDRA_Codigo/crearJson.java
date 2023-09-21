@@ -24,7 +24,6 @@ public class crearJson {
         // Crear un JSONArray para almacenar los datos
         JSONArray jsonArray = new JSONArray();
 
-        // Convertir los datos a JSON y agregarlos al JSONArray
         for (String[] fila : datos) {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("ID", fila[0]);
@@ -32,15 +31,13 @@ public class crearJson {
             jsonObject.put("Apellido", fila[2]);
             jsonArray.add(jsonObject);
         }
-
-        // Construir la ruta completa para el archivo JSON en la misma ubicación que el
-        // CSV
+        
         String nombreArchivoJSON = "datos.json";
         String rutaCompletaJSON = directorioCSV.resolve(nombreArchivoJSON).toString();
 
         // Escribir el JSON en un archivo
         try (FileWriter fileWriter = new FileWriter(rutaCompletaJSON, StandardCharsets.UTF_8)) {
-            fileWriter.write(jsonArray.toString()); // El 4 indica que se utilizarán 4 espacios para la indentación
+            fileWriter.write(jsonArray.toString());
             System.out.println("Archivo JSON creado correctamente en: " + rutaCompletaJSON);
         } catch (IOException e) {
             System.out.println("Archivo JSON no pudo ser creado correctamente en: " + rutaCompletaJSON);
